@@ -2,6 +2,7 @@ body {
   font-family: 'Roboto', sans-serif;
   background-color: rgb(224, 234, 255);
   /* font-family: 'Fira Sans', sans-serif; */
+  text-align: center;
 }
 
 h1 {
