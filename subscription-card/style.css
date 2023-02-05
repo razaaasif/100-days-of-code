@@ -1,0 +1,44 @@
+body {
+  background-color: azure;
+}
+.main {
+  margin: 2rem ;
+  text-align: center;
+  background-color: white;
+  width: 300px;
+  padding: 2rem;
+
+}
+.main h1{
+    font-size: 2rem;
+    font-weight: bolder;
+}
+.main p{
+    color: grey;
+    
+}
+.main .price{
+    color: black;
+    font-size: x-large;
+    font-weight: 900;
+    background-color: rgb(186, 255, 255);
+    padding:0;
+    width: 100%;
+}
+
+.btn-container{
+    margin: auto;
+}
+.btn{
+
+    margin: 2rem ;
+    width: 100%;
+    padding: .8rem;
+    text-align: center;
+    background-color: white;
+    border: 1px solid grey;
+    color: aqua;
+    font-size: large;
+    font-weight: bold;
+
+}
