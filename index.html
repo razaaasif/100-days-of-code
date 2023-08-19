@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <title>100 Days of Web Development Projects</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand col-md-3" href="#"
+          >100 Days of Web Development Projects</a
+        >
+        <div class="col-md-9" style="justify-content: space-between">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+              <a class="nav-link" href="#">Features</a>
+              <a class="nav-link" href="#">Pricing</a>
+              <a
+                class="nav-link disabled"
+                href="#"
+                tabindex="-1"
+                aria-disabled="true"
+                >Disabled</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <main>
+      <section id="projects">
+        <ul class="project-list">
+          <li class="project">
+            <h2 class="project-title">
+              Project 1: Project Name 1
+              <a class="project-link" href="#" target="_blank">&#128279;</a>
+              <span class="icon-angle">&#10148;</span>
+            </h2>
+            <div class="project-content">
+              <p>
+                This is the content for Project 1. Lorem ipsum dolor sit amet,
+                consectetur adipiscing elit. Nullam dignissim risus ut ligula
+                volutpat, id dictum odio feugiat. Aenean in odio et mauris
+                efficitur dictum.
+              </p>
+              <button class="btn">Learn More</button>
+              <ul class="pointers">
+                <li>&#10148; Point 1</li>
+                <li>&#10148; Point 2</li>
+                <li>&#10148; Point 3</li>
+              </ul>
+            </div>
+          </li>
+          <li class="project">
+            <h2 class="project-title">
+              Project 2: Project Name 2
+              <a class="project-link" href="#" target="_blank">&#128279;</a>
+              <span class="icon-angle">&#10148;</span>
+            </h2>
+            <div class="project-content">
+              <p>
+                This is the content for Project 2. Quisque commodo odio quis
+                mauris venenatis malesuada. Vestibulum ante ipsum primis in
+                faucibus orci luctus et ultrices posuere cubilia curae; Fusce
+                eleifend interdum ultrices.
+              </p>
+              <button class="btn">Learn More</button>
+              <ul class="pointers">
+                <li>&#10148; Point A</li>
+                <li>&#10148; Point B</li>
+                <li>&#10148; Point C</li>
+              </ul>
+            </div>
+          </li>
+          <!-- Add more project items similarly -->
+        </ul>
+      </section>
+    </main>
+    <footer style="position: fixed; bottom: 0; left: 50%">
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/aasif-raza/" target="_blank"
+          >LinkedIn</a
+        >
+        <a href="contact.html">Gmail</a>
+        <a href="https://yoursite.com" target="_blank">Personal Site</a>
+      </div>
+    </footer>
+
+    <script>
+      const projectItems = document.querySelectorAll('.project');
+
+      projectItems.forEach((item) => {
+        const projectTitle = item.querySelector('.project-title');
+        const projectContent = item.querySelector('.project-content');
+
+        projectTitle.addEventListener('click', () => {
+          item.classList.toggle('open');
+        });
+      });
+    </script>
+  </body>
+</html>

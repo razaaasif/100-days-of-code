@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="contact-styles.css" />
+    <title>Contact Page</title>
+  </head>
+  <body>
+    <header>
+      <h1>Contact Us</h1>
+    </header>
+    <main>
+      <section id="contact-form">
+        <h2>Contact Form</h2>
+        <form
+          id="email-form"
+          action="mailto:aasifraza9123@gmail.com"
+          method="post"
+          enctype="text/plain"
+        >
+          <label for="subject">Subject:</label>
+          <input type="text" id="subject" name="subject" required />
+          <label for="email-content">Email Content:</label>
+          <textarea id="email-content" name="email-content" required></textarea>
+          <button id="send-button" type="button">Send</button>
+        </form>
+      </section>
+      <button
+        class="go-back-button"
+        style="margin-top: 1rem"
+        onclick="goBack()"
+      >
+        Go Back
+      </button>
+    </main>
+
+    <!-- ... Previous HTML content ... -->
+
+    <script>
+      const sendButton = document.getElementById('send-button');
+      sendButton.addEventListener('click', () => {
+        const subject = document.getElementById('subject').value;
+        const emailContent = document.getElementById('email-content').value;
+
+        const emailData = {
+          subject: subject,
+          content: emailContent,
+        };
+
+        // Send email data to the server-side endpoint using a POST request
+        fetch('mailto:aasifraza9123@gmail.com', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(emailData),
+        })
+          .then((response) => response.json())
+          .then((data) => {
+            if (data.success) {
+              alert('Email Sent Successfully!');
+            } else {
+              alert('Failed to send email. Please try again later.');
+            }
+          })
+          .catch((error) => {
+            console.error('An error occurred:', error);
+            alert('An error occurred while sending the email.');
+          });
+      });
+
+      function goBack() {
+        window.history.back();
+      }
+    </script>
+  </body>
+</html>
